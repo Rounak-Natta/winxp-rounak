@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "xp.css/dist/XP.css";
-@import url("https://fonts.cdnfonts.com/css/tahoma");
 
 
 /* ====================Global Css ======================= */
@@ -84,12 +83,11 @@
   border: 1px solid #1436A5;
 }
 
-/* Top bar sticks to the very top */
 .login-top {
   top: 0;
 }
 
-/* Bottom bar sticks to the very bottom */
+
 .login-down {
   bottom: 0;
 }
@@ -101,7 +99,7 @@
   justify-content: space-around;
 
   /* Smooth animation */
-  transition: 
+  transition:
     transform 0.25s ease,
     background-color 0.25s ease,
     padding 0.25s ease,
@@ -109,10 +107,12 @@
 }
 
 .user-box:hover {
-  transform: scale(1.05);     /* smoother than scale: 1.1 */
+  transform: scale(1.05);
+  /* smoother than scale: 1.1 */
   background-color: rgba(240, 255, 255, 0.6);
-  padding: 12px 8px;          /* subtle expansion */
-  border-radius: 8px;         /* smoother curve */
+  padding: 12px 8px;
+  border-radius: 8px;
+
 }
 
 
@@ -135,29 +135,77 @@
   font-weight: light;
   cursor: pointer;
 }
-.username-text{
+
+.username-text {
   cursor: pointer;
 
 }
+
 .login-text {
   color: snow;
   font-size: medium;
   font-weight: 600;
 }
-.login-down{
+
+.login-down {
   padding: 5px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: rgb(234, 234, 234);
 }
-.bottom-tab-left{
+
+.bottom-tab-left {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 5px;
   cursor: pointer;
 }
-.bottom-tab-left img{
+
+.bottom-tab-left img {
   height: 40px;
+}
+
+/* ====================Welcome Screen ======================= */
+
+.welcome-screen{
+  border: 1px solid blue;
+  background-color: #5F82DD;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.welcome-top,
+.welcome-down {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: #1436A5;
+  border: 1px solid #1436A5;
+}
+
+.welcome-top {
+  top: 0;
+}
+
+.welcome-down {
+  bottom: 0;
+}
+
+.welcome-text {
+  padding: 20px 40px;
+  font-size: 48px;
+  font-weight: 600;
+  font-style: italic;
+  color: snow;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  display: inline-block;
+  border-radius: 4px;
 }
