@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @import "xp.css/dist/XP.css";
+@import url("https://fonts.cdnfonts.com/css/tahoma");
 
+
+/* ====================Global Css ======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Tahoma", sans-serif;
+}
 
 
 /* ====================Loader Screen ======================= */
@@ -19,80 +28,136 @@
 }
 
 /* ====================Login Screen ======================= */
-/* MAIN CONTAINER */
 .login-container {
   height: 100vh;
   width: 100%;
-  background: #5f82dd;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  font-family: "Trebuchet MS", sans-serif;
-}
-
-/* TOP & BOTTOM BLUE BARS */
-.login-top,
-.login-down {
-  height: 12%;
-  width: 100%;
-  background: #0a2fa2;
-}
-
-/* MIDDLE CARD */
-.login-card {
-  height: 76%;
-  width: 60%;
-  display: flex;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(4px);
-  border-radius: 4px;
-}
-
-/* LEFT SIDE */
-.login-card-left {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding-left: 50px;
-  color: white;
+  background-color: #5F82DD;
 }
 
-.xp-logo {
-  height: 130px;
-  margin-bottom: 15px;
+.login-card {
+  display: flex;
+  height: 70%;
+  /* border: 1px solid red; */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
 }
 
-.login-text {
-  font-size: 20px;
-  margin-top: 10px;
+.login-card-left img {
+  height: 155px;
 }
 
-/* RIGHT SIDE */
+.login-card-right img {
+  height: 55px;
+  cursor: pointer;
+
+}
+
+.login-card-left,
 .login-card-right {
   width: 50%;
+  padding: 10px;
+}
+
+.login-card-left {
+  border-right: 1px solid rgba(252, 252, 252, 0.403);
+}
+
+.div-content-logo {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-/* USER BOX */
-.user-box {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 20px 25px;
-  border-radius: 8px;
-  text-align: center;
+.login-top,
+.login-down {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: #1436A5;
+  border: 1px solid #1436A5;
 }
 
-.avatar {
-  width: 70px;
-  height: 70px;
+/* Top bar sticks to the very top */
+.login-top {
+  top: 0;
+}
+
+/* Bottom bar sticks to the very bottom */
+.login-down {
+  bottom: 0;
+}
+
+
+.user-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  /* Smooth animation */
+  transition: 
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    padding 0.25s ease,
+    border-radius 0.25s ease;
+}
+
+.user-box:hover {
+  transform: scale(1.05);     /* smoother than scale: 1.1 */
+  background-color: rgba(240, 255, 255, 0.6);
+  padding: 12px 8px;          /* subtle expansion */
+  border-radius: 8px;         /* smoother curve */
+}
+
+
+.user-box img {
+  border: 1px solid snow;
   border-radius: 5px;
-  margin-bottom: 10px;
+}
+
+.user-box h5 {
+  color: snow;
+  font-size: medium;
+}
+
+.username-text-box {
+  display: flex;
+  flex-direction: column;
 }
 
 .username {
-  color: white;
-  font-size: 18px;
-  margin-top: 5px;
+  font-weight: light;
+  cursor: pointer;
+}
+.username-text{
+  cursor: pointer;
+
+}
+.login-text {
+  color: snow;
+  font-size: medium;
+  font-weight: 600;
+}
+.login-down{
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(234, 234, 234);
+}
+.bottom-tab-left{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  cursor: pointer;
+}
+.bottom-tab-left img{
+  height: 40px;
 }
