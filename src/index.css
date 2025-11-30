@@ -230,23 +230,32 @@
 .xp-start-btn {
   background: linear-gradient(to bottom, #28ab35, #1e7a27);
   color: white;
-  height: 30px;
+  height: 39px;
   padding: 0 14px;
-  margin-left: 6px;
   border-radius: 6px;
   display: flex;
+  padding-right: 30px;
   align-items: center;
   font-weight: bold;
   font-family: Tahoma;
-  font-size: 14px;
+  font-style: italic;
+  font-size: 18px;
   box-shadow: inset 0 1px #6be07d, inset 0 -1px #0e5719, 0 1px 3px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+  gap: 10px;
+
+  /* 🟢 Added subtle XP text shadow */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4), 
+               -1px -1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .xp-start-btn:active {
   box-shadow: inset 0 -1px #6be07d, inset 0 1px #0e5719;
 }
 
+.xp-start-btn img{
+  height: 20px;
+}
 .start-text {
   letter-spacing: 0.5px;
 }
@@ -262,7 +271,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-right: 10px;
   color: white;
   font-family: Tahoma;
   font-size: 14px;
@@ -321,4 +329,91 @@
   color: white;
   font-family: Tahoma;
   text-shadow: 1px 1px 3px black;
+}
+
+/* ===================================================== Start Menu =============================== */
+.xp-startmenu {
+  position: absolute;
+  bottom: 45px;
+  left: 5px;
+  width: 360px;
+  height: 430px;
+  background: #f2f2f2;
+  border: 2px solid #0a4aa5;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  font-family: Tahoma;
+  animation: fadeIn 0.15s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* LEFT BLUE BAR */
+.xp-startmenu-left {
+  width: 90px;
+  background: linear-gradient(to bottom, #2258d6, #043093);
+  padding: 10px;
+  color: white;
+}
+
+.xp-user-box {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.xp-user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  border: 2px solid #fff;
+}
+
+.xp-username {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* RIGHT SIDE */
+.xp-startmenu-right {
+  flex: 1;
+  background: #f1f1f1;
+  padding: 12px;
+}
+
+/* Titles */
+.xp-section-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #003399;
+  margin-bottom: 8px;
+}
+
+/* List */
+.xp-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.xp-menu-list li {
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.xp-menu-list li:hover {
+  background: #c7ddfa;
+}
+
+/* Divider */
+.xp-divider {
+  height: 1px;
+  background: #c0c0c0;
+  margin: 14px 0;
 }
