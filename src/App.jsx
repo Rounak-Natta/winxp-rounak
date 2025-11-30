@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginScreen from "./pages/LoginScreeen";
-import Home from "./pages/Home.jsx";
-import Welcome from "./components/Welcome.jsx";
+import Welcome from "./components/WelcomeLoader.jsx";
+import HomePage from "./pages/HomePage.jsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginScreen />} />
-        <Route path="/welcome" element={<Welcome />} />
+        <Route path="/home" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
   );

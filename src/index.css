@@ -209,3 +209,116 @@
   display: inline-block;
   border-radius: 4px;
 }
+
+
+/* =============================================== Home Page ============================================== */
+.xp-taskbar {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to top, #0c4ab4, #3c79f5);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  border-top: 2px solid #08338a;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Start Button */
+.xp-start-btn {
+  background: linear-gradient(to bottom, #28ab35, #1e7a27);
+  color: white;
+  height: 30px;
+  padding: 0 14px;
+  margin-left: 6px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-family: Tahoma;
+  font-size: 14px;
+  box-shadow: inset 0 1px #6be07d, inset 0 -1px #0e5719, 0 1px 3px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.xp-start-btn:active {
+  box-shadow: inset 0 -1px #6be07d, inset 0 1px #0e5719;
+}
+
+.start-text {
+  letter-spacing: 0.5px;
+}
+
+/* Middle Blue Section */
+.xp-middle {
+  flex: 1;
+  height: 100%;
+}
+
+/* System Tray */
+.xp-tray {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+  color: white;
+  font-family: Tahoma;
+  font-size: 14px;
+}
+
+/* Tray Icons */
+.tray-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Clock */
+.tray-time {
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  font-size: 13px;
+}
+/* ============================================================== Desktop Css ======================================================== */
+/* Desktop Background */
+.xp-desktop {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Left-Aligned Icons */
+.xp-icons-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Icon Box */
+.xp-icon {
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.xp-icon-img {
+  width: 48px;
+  height: 48px;
+}
+
+.xp-icon-label {
+  margin-top: 4px;
+  font-size: 12px;
+  color: white;
+  font-family: Tahoma;
+  text-shadow: 1px 1px 3px black;
+}

@@ -18,7 +18,7 @@ const LoginScreeen = () => {
   }, []);
 
   const handleClick = () => {
-    window.location.href = "/welcome";
+    window.location.href = "/home";
   };
 
   return (
