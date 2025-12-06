@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Xplogo from "../assets/xplogo.png";
+import Xplogo from "../assets/logowhite.png";
 import Avatar from "../assets/avatar.jpeg";
 import Shutdown from "../assets/Shutdown.png";
-import xpLogo from "../assets/xplogo.png";
 
 const LoginScreeen = () => {
   const [loading, setLoading] = useState(true);
@@ -32,7 +31,7 @@ const LoginScreeen = () => {
           }`}
         >
           {/* XP Logo */}
-          <img src={xpLogo} alt="XP Logo" className="w-75 mb-4 select-none" />
+          <img src={Xplogo} alt="XP Logo" className="w-75 mb-4 select-none" />
 
           {/* XP Loader Bar */}
           <div className="relative w-[180px] h-[18px] bg-[#0a0a0a] border border-[#4e4e4e] rounded-sm overflow-hidden">
