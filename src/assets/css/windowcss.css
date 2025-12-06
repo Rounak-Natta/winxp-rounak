@@ -60,3 +60,106 @@
   overflow-wrap: break-word;
 }
 
+/* =======================PORTFOLIO========================== */
+.portfolio-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 580px;
+  transform: translate(-50%, -50%);
+  background: #000;
+  border: 2px solid #0a4aa5;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 999;
+  color: #00ff00;
+  font-family: "Lucida Console", monospace;
+}
+/* YouTube Clone inside XP Window */
+.yt-body {
+  height: calc(100% - 32px);
+  overflow-y: auto;
+  color: white;
+  background-color: #0f0f0f;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.yt-body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 10px;
+  background-color: #0f0f0f;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Sidebar */
+#sidebar {
+  flex: 0.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  height: 100%;
+  background-color: #0f0f0f;
+  overflow-y: auto;
+}
+
+/* Videos grid */
+#videos {
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+#videos div > img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Section inside video card */
+section {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+section img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+section div p {
+  font-size: 0.9em;
+}
+section div small {
+  font-size: 0.7em;
+  color: #ccc;
+}
+
+/* Categories */
+.yt-categories {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 10px;
+  overflow-x: auto;
+  background-color: #0f0f0f;
+}
+.yt-categories li {
+  background-color: #2b2b2b;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.yt-categories li.active-category,
+.yt-categories li:hover {
+  background-color: white;
+  color: black;
+}

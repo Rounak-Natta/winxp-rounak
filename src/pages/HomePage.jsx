@@ -4,6 +4,7 @@ import WelcomeLoader from "../components/WelcomeLoader"
 import TaskBar from '../components/TaskBar';
 import DesktopIcon from "../components/DesktopIcon";
 import CommandScreen from "../components/CommandScreen";
+import MyProjects from "../components/MyProjects";
 
 import myComp from "../assets/mycomputer.png";
 import myDocs from "../assets/mydocs.png";
@@ -16,6 +17,7 @@ const HomePage = () => {
 
     const [loading, setLoading] = useState(true);
     const [openCMD, setOpenCMD] = useState(false);
+    const [openProjects, setOpenProjects] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -35,7 +37,9 @@ const HomePage = () => {
                     <div className="xp-icons-container">
                         <DesktopIcon icon={myComp} label="My Computer" />
                         <DesktopIcon icon={myDocs} label="About Me" />
-                        <DesktopIcon icon={network} label="My Projects" />
+                        <DesktopIcon icon={network} 
+                        label="My Projects"
+                        onClick={() => setOpenProjects(true)}  />
                         
                         <DesktopIcon 
                             icon={CMD} 
@@ -49,8 +53,13 @@ const HomePage = () => {
                     <TaskBar />
 
                     {openCMD && (
-                        <CommandScreen onClose={() => setOpenCMD(false)} />
-                    )}
+    <CommandScreen onClose={() => setOpenCMD(false)} />
+)}
+
+{openProjects && (
+    <MyProjects onClose={() => setOpenProjects(false)} />
+)}
+
                 </div>
             )}
         </>
