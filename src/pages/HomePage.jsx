@@ -33,7 +33,7 @@ const HomePage = () => {
                     <div className="xp-icons-container">
                         <DesktopIcon icon={myComp} label="My Computer" />
                         <DesktopIcon icon={myDocs} label="My Documents" />
-                        <DesktopIcon icon={network} label="Network" />
+                        <DesktopIcon icon={network} label="About Me" />
                         <DesktopIcon icon={recycle} label="Recycle Bin" />
                     </div>
 
