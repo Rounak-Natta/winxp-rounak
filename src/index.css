@@ -314,7 +314,7 @@
 /* Icon Box */
 .xp-icon {
   width: 80px;
-  text-align: center;
+  text-align: left center;
   cursor: pointer;
 }
 
@@ -497,4 +497,7 @@ width: 50%;
 .social-box h4{
   font-size: 11px;
   color: #797979;
+}
+.xp-desktop {
+  position: relative;
 }

@@ -1,0 +1,62 @@
+/* XP Command Prompt Window */
+.cmd-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 580px;
+  transform: translate(-50%, -50%);
+  background: #000;
+  border: 2px solid #0a4aa5;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 999;
+  color: #00ff00;
+  font-family: "Lucida Console", monospace;
+}
+
+/* XP Title Bar */
+.cmd-title-bar {
+  height: 32px;
+  background: linear-gradient(to right, #0a4aa5, #3c8df5);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #063b82;
+}
+
+.cmd-close-btn {
+  background: #EEECDC;
+  color: #3e3e3e;
+  font-weight: bold;
+  border: none;
+  width: 10px;
+  height: 22px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cmd-close-btn:hover {
+  background: #3e3e3e;
+  color:#EEECDC ;
+}
+
+/* CMD Black Area */
+.cmd-body {
+  padding: 10px;
+  height: calc(100% - 32px);
+  color: #00ff00;
+  font-size: 15px;
+  overflow-y: auto;
+
+  /* ENABLE TEXT WRAPPING */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
